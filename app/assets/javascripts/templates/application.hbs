@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="header">
+    <ul class="nav nav-pills pull-right">
+      {{#link-to "projects" tagName="li"}}
+        {{#link-to "projects"}}Projects{{/link-to}}
+      {{/link-to}}
+    </ul>
+    <h3 class="text-muted">Project name</h3>
+  </div>
+
+  <div class="row">
+    {{ outlet }}
+  </div>
+
+  <div class="footer">
+    <p>© Company 2013</p>
+  </div>
+
+</div>

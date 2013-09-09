@@ -1,0 +1,10 @@
+<table class="table">
+  <tbody>
+    {{#each tasks itemController='task'}}
+      <tr>
+        <td>{{input type=checkbox checked=completed}}</td>
+        <td>{{name}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
