@@ -1,7 +1,7 @@
 Ember Todo: An rails4 + ember1.0 + ember-data1.0 demo
 ==================================
 
-- Live demo <http://embertodo.herokuapp.com>
+- Live demo <http://ember-todo.herokuapp.com>
 
 USAGE
 =====
