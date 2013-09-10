@@ -21,10 +21,8 @@ EmberTodo.ApplicationSerializer = DS.RESTSerializer.extend
     record.eachAttribute (name) ->
       json[serverAttributeName(name)] = record.get(name)
     record.eachRelationship (name, relationship) ->
-      console.log name, relationship
       if relationship.kind is 'hasMany'
         json[serverHasManyName(name)] = record.get(name).mapBy('id')
       if relationship.kind is "belongsTo"
-        console.log window.project = record.get(name)
         json["#{name.singularize()}_id"] = record.get(name).get('id')
     json

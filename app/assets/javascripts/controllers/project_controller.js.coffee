@@ -3,6 +3,6 @@ EmberTodo.ProjectController = Ember.ObjectController.extend
   actions:
     createNewTask: ->
       task = @store.createRecord('task',{name: @get('newTask'), project: @content })
-      task.save().then =>
-        @content.get('tasks').pushObject task
+      task.save().then (model)=>
+        @content.get('tasks').pushObject model
         @set 'newTask', ''
