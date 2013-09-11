@@ -5,7 +5,6 @@ EmberTodo::Application.routes.draw do
 
   constraints(constraints: Constraints::Format.new(:json)) do
     resources :tasks
-
     resources :projects
   end
 end
