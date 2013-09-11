@@ -1,6 +1,5 @@
-(function() {
-  EmberTodo.ProjectsView = Ember.View.extend({
-    templateName: 'projects'
-  });
+EmberTodo.ProjectsView = Ember.View.extend({
+  templateName: 'projects'
+});
 
-}).call(this);
+

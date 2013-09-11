@@ -1,6 +1,5 @@
-(function() {
-  EmberTodo.TasksView = Ember.View.extend({
-    templateName: 'tasks'
-  });
+EmberTodo.TasksView = Ember.View.extend({
+  templateName: 'tasks'
+});
 
-}).call(this);
+
