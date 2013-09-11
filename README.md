@@ -1,6 +1,8 @@
 Ember Todo: An rails4 + ember1.0 + ember-data1.0 demo
 ==================================
 
+- The coffeescript-less version!
+- Forked from https://github.com/FeipingHunag/ember-todo
 - Live demo <http://ember-todo.herokuapp.com>
 
 USAGE
