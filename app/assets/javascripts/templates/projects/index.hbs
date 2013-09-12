@@ -14,7 +14,7 @@
           <td>{{id}}</td>
           <td>{{#link-to 'project' this}} {{name}} {{/link-to}}</td>
           <td>{{description}}</td>
-          <td><button class="btn btn-default" {{action deleteProject this}}>Delete</button></td>
+          <td><button class="btn btn-default" {{action delete this}}>Delete</button></td>
         </tr>
       {{/unless}}
     {{/each}}
