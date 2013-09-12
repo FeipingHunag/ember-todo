@@ -1,52 +1,37 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
-  # GET /projects
-  # GET /projects.json
+  respond_to :json
+
   def index
     render json: Project.all
   end
 
-  # GET /projects/1
-  # GET /projects/1.json
   def show
     render json: @project
   end
 
-
-  # GET /projects/1/edit
-  def edit
-  end
-
-  # POST /projects
-  # POST /projects.json
   def create
-    @project = Project.create(project_params)
-    render json: @project
+    @project = Project.new(project_params)
+    if @project.save
+      render json: @project
+    else
+      render json: { errors: @project.errors }, status: :unprocessable_entity
+    end
+
   end
 
-  # PATCH/PUT /projects/1
-  # PATCH/PUT /projects/1.json
   def update
-    respond_to do |format|
-      if @project.update(project_params)
-        format.html { redirect_to @project, notice: 'Project was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @project.errors, status: :unprocessable_entity }
-      end
+    if @project.update(project_params)
+      head :no_content
+    else
+      render json: @project.errors, status: :unprocessable_entity
     end
   end
 
-  # DELETE /projects/1
-  # DELETE /projects/1.json
   def destroy
     @project.destroy
-    respond_to do |format|
-      format.html { redirect_to projects_url }
-      format.json { head :no_content }
-    end
+    head :no_content
   end
 
   private

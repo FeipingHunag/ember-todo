@@ -1,0 +1,21 @@
+<div class="well">
+  <form {{action 'save' on="submit"}}>
+    <div {{bind-attr class=":form-group errors.name:has-error"}}>
+      {{input type="text" value=name class="form-control" placeholder="New Your Project"}}
+      {{#if errors.name }}
+        <span class="help-block">{{format-error errors.name}}</span>
+      {{/if}}
+
+    </div>
+    <div {{bind-attr class=":form-group errors.description:has-error"}}>
+      {{textarea  value=description class="form-control" placeholder="Description"}}
+      {{#if errors.description }}
+        <span class="help-block">{{format-error errors.description}}</span>
+      {{/if}}
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-default">Create Project</button>
+      <a href="javascript:;" {{action 'cancel'}}>Cancel</a>
+    </div>
+  </form>
+</div>

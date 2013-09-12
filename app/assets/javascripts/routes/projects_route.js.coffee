@@ -1,3 +1,3 @@
-EmberTodo.ProjectsRoute = Ember.Route.extend
+EmberTodo.ProjectsIndexRoute = Ember.Route.extend
   model: ->
     @store.find 'project'

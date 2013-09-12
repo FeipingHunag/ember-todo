@@ -4,8 +4,7 @@ EmberTodo::Application.routes.draw do
   get '*tab', :to => 'application#index', constraints: Constraints::Format.new(:html)
 
   constraints(constraints: Constraints::Format.new(:json)) do
-    resources :tasks
-
-    resources :projects
+    resources :projects, except: [:new, :edit]
+    resources :tasks, except: [:show, :new, :edit]
   end
 end

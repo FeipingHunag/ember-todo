@@ -1,43 +1,9 @@
+<header class="clearfix">
+  <h2>Your projects</h2>
+  {{#link-to 'projects.new' class="pull-right"}}Create project{{/link-to}}
+</header>
+
 <div class="span12">
-  {{#if isNewing}}
-    <div class="well">
-      <form {{action 'createNewProject' on="submit"}}>
-        <div class="form-group">
-          {{input type="text" value=newProjectName class="form-control" placeholder="New Your Project"}}
-        </div>
-        <div class="form-group">
-          {{textarea  value=newProjectDescription class="form-control"}}
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-default">Create Project</button>
-          <a href="javascript:;" {{action 'cancel'}}>Cancel</a>
-        </div>
-      </form>
-    </div>
-  {{else}}
-    <header>
-      <h2>Your projects</h2>
-      <a href="javascript:;" class="pull-right" {{action 'showNewForm'}}>Create project</a>
-    </header>
-  {{/if}}
+  {{outlet}}
 </div>
-<table class="table">
-  <thead>
-    <tr>
-      <td>ID</td>
-      <td>Name</td>
-      <td>Discription</td>
-      <td></td>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each controller}}
-      <tr>
-        <td>{{id}}</td>
-        <td>{{#link-to 'project' this}} {{name}} {{/link-to}}</td>
-        <td>{{description}}</td>
-        <td><button class="btn btn-default" {{action deleteProject this}}>Delete</button></td>
-      </tr>
-    {{/each}}
-  </tbody>
-</table>
+
