@@ -9,14 +9,12 @@
   </thead>
   <tbody>
     {{#each controller}}
-      {{#unless isNew}}
-        <tr>
-          <td>{{id}}</td>
-          <td>{{#link-to 'project' this}} {{name}} {{/link-to}}</td>
-          <td>{{description}}</td>
-          <td><button class="btn btn-default" {{action deleteProject this}}>Delete</button></td>
-        </tr>
-      {{/unless}}
+      <tr>
+        <td>{{id}}</td>
+        <td>{{#link-to 'project' this}} {{name}} {{/link-to}}</td>
+        <td>{{description}}</td>
+        <td><button class="btn btn-default" {{action deleteProject this}}>Delete</button></td>
+      </tr>
     {{/each}}
   </tbody>
 </table>
