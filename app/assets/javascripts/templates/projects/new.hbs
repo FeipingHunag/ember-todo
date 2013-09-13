@@ -5,10 +5,9 @@
       {{#if errors.name }}
         <span class="help-block">{{format-error errors.name}}</span>
       {{/if}}
-
     </div>
     <div {{bind-attr class=":form-group errors.description:has-error"}}>
-      {{textarea  value=description class="form-control" placeholder="Description"}}
+      {{textarea value=description class="form-control" placeholder="Description"}}
       {{#if errors.description }}
         <span class="help-block">{{format-error errors.description}}</span>
       {{/if}}

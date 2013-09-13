@@ -18,3 +18,4 @@ EmberTodo.ProjectsNewRoute = Ember.Route.extend
   deactivate: ->
     unless @currentModel.get('isSaving')
       @currentModel.rollback()
+
