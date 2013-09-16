@@ -4,7 +4,7 @@ EmberTodo.Router.reopen({
 
 EmberTodo.Router.map(function(){
   this.resource('projects');
-  return this.resource('project', {
+  this.resource('project', {
     path: 'projects/:project_id'
   });
 });
